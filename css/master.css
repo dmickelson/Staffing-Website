@@ -1,5 +1,5 @@
 :root {
-  --mainblue: #003152;
+  --mainblue: #203864;
   --mainsilver: #c0c0c0;
 }
 
@@ -16,6 +16,7 @@ body {
 /* Global */
 .container {
   width: 80%;
+  max-width: 900px;
   margin: auto;
   overflow: hidden;
 }
@@ -27,7 +28,7 @@ ul {
 
 .dark {
   padding: 15px;
-  background-color: #003152;
+  background-color: #203864;
   background-color: var(--mainblue);
   color: ##c0c0c0;
   color: var(--mainsilver);
@@ -39,13 +40,12 @@ ul {
 
 /* Header */
 header {
-  background-color: #003152;
-  background-color: var(--mainblue);
+  background-color: #203864;
   color: white;
   padding-top: 20px;
   min-height: 70px;
+  width: 100%;
   border-bottom-color: ##c0c0c0;
-  border-bottom-color: var(--mainsilver);
   border-bottom-width: 3px;
   border-bottom-style: solid;
 }
@@ -76,12 +76,28 @@ header #branding {
 }
 
 header #branding h1 {
-  margin: 0;
+  margin: 10px;
+  float: right;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond,
+    "Times New Roman", serif;
+  font-size: 36px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
 }
 
 header nav {
   float: right;
   margin-top: 10px;
+}
+
+header nav ul li {
+  border-right: 1px solid white;
+}
+
+header nav ul li:last-child {
+  border-right: none;
 }
 
 header a:hover {
@@ -185,6 +201,5 @@ footer {
   color: ##c0c0c0;
   color: var(--mainsilver);
   text-align: center;
-  background-color: #003152;
-  background-color: var(--mainblue);
+  background-color: #203864;
 }
