@@ -131,9 +131,8 @@ header a:hover {
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
   border-bottom-color: #c0c0c0;
   background-color: #333333;
-  background-image: url("../img/pexels-photo-1056553.jpeg");
-  background-image: url("../img/showcase-v2.jpg");
-  background-position: 0 -700px;
+  background-image: url("../img/showcase.jpg");
+  background-position: -300px -750px;
   background-repeat: no-repeat;
   opacity: 0.85;
 }
