@@ -49,8 +49,7 @@ ul {
   padding: 15px;
   background-color: #203864;
   background-color: var(--mainblue);
-  color: ##c0c0c0;
-  color: var(--mainsilver);
+  color: #c0c0c0;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -62,7 +61,7 @@ header {
   padding-top: 20px;
   min-height: 70px;
   width: 100%;
-  border-bottom-color: ##c0c0c0;
+  border-bottom-color: #c0c0c0;
   border-bottom-width: 3px;
   border-bottom-style: solid;
 }
@@ -118,8 +117,7 @@ header nav ul li:last-child {
 }
 
 header a:hover {
-  color: ##c0c0c0;
-  color: var(--mainsilver);
+  color: #c0c0c0;
   font-weight: bold;
 }
 
@@ -171,6 +169,15 @@ header a:hover {
   font-size: 25px;
 }
 
+/* Testimonials */
+
+#testimonials {
+  padding: 20px;
+  margin_top: 20px;
+  background-color: #ededed;
+  text-align: center;
+}
+
 /* Services */
 
 #services {
@@ -181,12 +188,11 @@ header a:hover {
 #services .services-grid-container {
   display: grid;
   /* grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr; */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-evenly;
   align-content: space-evenly;
   grid-gap: 10px 10px;
-  /* background-color: #C0C0C0;
-  background-color: var(--mainsilver); */
+  /* background-color: #C0C0C0; */
 }
 
 #services .services-grid-container .box {
@@ -223,8 +229,7 @@ header a:hover {
 footer {
   padding: 20px;
   margin-top: 20px;
-  color: ##c0c0c0;
-  color: var(--mainsilver);
+  color: #c0c0c0;
   text-align: center;
   background-color: #203864;
 }
