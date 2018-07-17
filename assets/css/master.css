@@ -102,15 +102,15 @@ header a:hover {
   font-weight: bold;
 }
 
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
 header li {
   float: left;
   display: inline;
   padding: 0 20px 0 20px;
-}
-
-header nav {
-  float: right;
-  margin-top: 10px;
 }
 
 header nav ul li {
@@ -243,10 +243,23 @@ footer {
   /* Hide menu items and show icon */
   nav li:not(:last-child) {
     display: none;
+    border-right: none;
   }
   nav li.icon {
     float: right;
     display: inline;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
   }
 }
 
