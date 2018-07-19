@@ -55,28 +55,51 @@ ul {
 }
 
 /* Header */
+/*  Set look and feel first, then alignment using grid after */
+
+#top-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1px;
+  grid-template-areas:
+    "smallcontact smallcontact smallcontact"
+    "branding brandingTitle myTopnav";
+}
+
 header {
   background-color: #203864;
   color: white;
-  padding-top: 20px;
-  min-height: 70px;
+  padding-top: 10px;
+  /* min-height: 70px; */
   width: 100%;
   border-bottom-color: #c0c0c0;
   border-bottom-width: 3px;
   border-bottom-style: solid;
 }
 
-header #smallcontact {
-  float: right;
+#smallcontact {
+  background-color: red;
+  grid-area: smallcontact;
+  text-align: right;
   font-size: 12px;
 }
 
-header #branding {
-  float: left;
+#smallcontact li {
+  display: inline-block;
+  padding: 0 20px 0 20px;
 }
 
-header #branding h1 {
-  margin: 10px;
+#branding {
+  background-color: red;
+  /* float: left; */
+  grid-area: branding;
+}
+
+#brandingTitle h1 {
+  grid-area: brandingTitle;
+  background-color: red;
+  padding-left: 10px;
   float: right;
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Gerogia,
     "Times New Roman", serif;
@@ -87,41 +110,43 @@ header #branding h1 {
   line-height: 26.4px;
 }
 
-header img {
+#myTopnav {
+  grid-area: myTopnav;
 }
 
-header a {
+#myTopnav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-header a:hover {
+#myTopnav a:hover {
   color: #c0c0c0;
   font-weight: bold;
 }
 
-header nav {
-  float: right;
+#myTopnav {
+  background-color: red;
+  /* float: right; */
   margin-top: 10px;
 }
 
-header li {
-  float: left;
+#myTopnav li {
+  /* float: left; */
   display: inline;
   padding: 0 20px 0 20px;
 }
 
-header nav ul li {
+#myTopnav ul li {
   border-right: 1px solid white;
 }
 
-header nav ul li:last-child {
+#myTopnav ul li:last-child {
   border-right: none;
 }
 
-nav li.icon {
+#myTopnav li.icon {
   display: none;
 }
 
@@ -241,11 +266,11 @@ footer {
 /* Media Queries */
 @media screen and (max-width: 1010px) {
   /* Hide menu items and show icon */
-  nav li:not(:last-child) {
+  #myTopnav li:not(:last-child) {
     display: none;
     border-right: none;
   }
-  nav li.icon {
+  #myTopnav li.icon {
     float: right;
     display: inline;
   }
@@ -274,5 +299,17 @@ footer {
   /* Fix the services layout */
   #services .services-grid-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  #top-container {
+    grid-template-areas:
+      "branding smallcontact smallcontact"
+      "branding brandingTitle myTopnav";
+  }
+  #smallcontact {
+    text-align: center;
+    vertical-align: middle;
   }
 }
