@@ -41,28 +41,32 @@
 </head>
   <body>
     <header>
-      <div class="container">
+      <div id="top-container">
         <div id="smallcontact">
           <ul>
             <li><i class="fas fa-phone-volume"></i> 339-440-2831</li>
             <li><i class="fas fa-envelope"></i> janine@jbrownpartners.com</li>
-            <li><a href="https://www.linkedin.com/company/j-brown-partners/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/j-brown-partners/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              </a></li>
           </ul>
         </div>
-        <div class="header_menu">
-          <div id="branding">
-            <a href="#top"><img src="./assets/img/jbp-54.jpg" alt="J Brown Partners"></a>
-            <h1>J Brown Partners</h1>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#approach">Approach</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#leadership">Leadership</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+        <div id="branding">
+          <a href="#top"><img height="51" width="54" src="./assets/img/jbp-54.jpg" alt="J Brown Partners"></a>
         </div>
+        <div id="brandingTitle">
+            <h1>J Brown Partners</h1>
+        </div>
+
+        <nav id="myTopnav" class="topnav">
+          <ul>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="icon"><a href="javascript:void(0);"  onclick="showResponsiveMenu()"><i class="fa fa-bars"></i></a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -70,7 +74,7 @@
       <!-- <div class="bg-image"></div> -->
       <div class="container">
         <h1>Greater Boston's Premier Woman-owned Experts In Technology Staffing</h1>
-        <p>Delivering exceptional talent, service and experience to our clients and consultants </p>
+        <p>Delivering the best talent, service and experience to both our clients and consultants </p>
       </div>
     </section>
 
@@ -142,7 +146,7 @@
         </p>
         <p>
           <em>
-            Our goal is simple but meaningful: "Delivering exceptional talent, service and experience to our clients and consultants"
+            Our goal is simple but meaningful: "Delivering the best talent, service and experience to both our clients and consultants"
           </em>
         </p>
       </div>
@@ -247,6 +251,15 @@
     cssEase: "linear"
   });
 });
+
+function showResponsiveMenu() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 </script>
   </body>
 </html>

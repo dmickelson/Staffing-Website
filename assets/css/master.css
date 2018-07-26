@@ -55,45 +55,55 @@ ul {
 }
 
 /* Header */
+/*  Set look and feel first, then alignment using grid after */
+
+#top-container {
+  display: grid;
+  justify-content: center; /* justify content for different areas? */
+  align-items: center;
+  grid-gap: 1px;
+  grid-template-areas:
+    "smallcontact smallcontact smallcontact"
+    "branding brandingTitle myTopnav";
+}
+
 header {
   background-color: #203864;
   color: white;
-  padding-top: 20px;
-  min-height: 70px;
+  padding-top: 10px;
+  /* min-height: 70px; */
   width: 100%;
   border-bottom-color: #c0c0c0;
   border-bottom-width: 3px;
   border-bottom-style: solid;
 }
 
-header #smallcontact {
-  float: right;
+#smallcontact {
+  grid-area: smallcontact;
+  text-align: right;
   font-size: 12px;
 }
 
-header img {
-}
-
-header a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-}
-
-header li {
-  float: left;
-  display: inline;
+#smallcontact li {
+  display: inline-block;
   padding: 0 20px 0 20px;
 }
 
-header #branding {
-  float: left;
+#smallcontact a {
+  color: white;
+  text-decoration: none;
 }
 
-header #branding h1 {
-  margin: 10px;
-  float: right;
+#branding {
+  /* float: left; */
+  grid-area: branding;
+}
+
+#brandingTitle h1 {
+  grid-area: brandingTitle;
+  padding-left: 10px;
+  /* float: right; */
+  text-align: right;
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Gerogia,
     "Times New Roman", serif;
   font-size: 36px;
@@ -103,22 +113,43 @@ header #branding h1 {
   line-height: 26.4px;
 }
 
-header nav {
-  float: right;
+#myTopnav {
+  grid-area: myTopnav;
+}
+
+#myTopnav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#myTopnav a:hover {
+  color: #c0c0c0;
+  font-weight: bold;
+}
+
+#myTopnav {
   margin-top: 10px;
 }
 
-header nav ul li {
+#myTopnav li {
+  /* float: left; */
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+#myTopnav ul li {
   border-right: 1px solid white;
 }
 
-header nav ul li:last-child {
+#myTopnav ul li:nth-child(4),
+#myTopnav ul li:nth-child(5) {
   border-right: none;
 }
 
-header a:hover {
-  color: #c0c0c0;
-  font-weight: bold;
+#myTopnav li.icon {
+  display: none;
 }
 
 /* Showcase */
@@ -232,4 +263,169 @@ footer {
   color: #c0c0c0;
   text-align: center;
   background-color: #203864;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  #brandingTitle h1 {
+    font-size: 34px;
+  }
+
+  #myTopnav a {
+    font-size: 14px;
+  }
+
+  #showcase h1 {
+    font-size: 40px;
+  }
+
+  #showcase p {
+    font-size: 18px;
+  }
+
+  #about p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 850px) {
+  /* Areas of Expertize list */
+  #areasofexpertise ul li {
+    float: left;
+    width: 100%; //helps to determine number of columns, for instance 33.3% displays 3 columns
+  }
+}
+
+@media (max-width: 850px) {
+  /* Fix the services layout */
+  #services .services-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  #top-container {
+    grid-template-areas:
+      "smallcontact smallcontact "
+      "branding brandingTitle "
+      "branding myTopnav ";
+  }
+
+  #brandingTitle h1 {
+    text-align: center;
+  }
+
+  #smallcontact {
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+/* Phones */
+
+@media (max-width: 450px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  #smallcontact {
+    font-size: 8px;
+  }
+
+  #smallcontact li {
+    padding: 0 10px 0 10px;
+  }
+
+  #brandingTitle h1 {
+    font-size: 20px;
+  }
+
+  #myTopnav {
+    margin-top: 0;
+  }
+
+  #myTopnav a {
+    font-size: 10px;
+  }
+
+  #myTopnav li {
+    padding: 0 10px 0 10px;
+  }
+
+  #showcase h1 {
+    font-size: 24px;
+  }
+  #showcase p {
+    font-size: 16px;
+  }
+
+  #about p {
+    font-size: 16px;
+  }
+}
+
+/* Dynamic Menu */
+@media screen and (max-width: 150px) {
+  /* Hide menu items and show icon */
+  #myTopnav li:not(:last-child) {
+    display: none;
+    border-right: none;
+  }
+  #myTopnav li.icon {
+    float: right;
+    display: inline;
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 150px) {
+  #myTopnav.responsive {
+    position: relative;
+  }
+
+  #myTopnav.responsive ul {
+    position: fixed;
+    top: 80px;
+  }
+
+  #myTopnav.responsive .icon {
+    background-color: green;
+    position: absolute;
+    right: 0;
+    top: -30px;
+  }
+
+  #myTopnav.responsive li {
+    float: none;
+    display: block;
+    text-align: right;
+  }
 }
