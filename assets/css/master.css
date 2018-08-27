@@ -47,12 +47,6 @@ a {
   overflow: hidden;
 }
 
-.navbar-brand {
-  /* font-size: 3.7rem;
-  margin-bottom: 0.3em;
-  line-height: 1.1em; */
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -90,43 +84,13 @@ header {
   /* padding-left: 5px; */
 }
 
-#myTopnav {
-  grid-area: myTopnav;
-}
-
-#myTopnav a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-}
-
-#myTopnav a:hover {
-  color: #c0c0c0;
-  font-weight: bold;
-}
-
-#myTopnav {
-  margin-top: 10px;
-}
-
-#myTopnav li {
-  /* float: left; */
-  display: inline;
-  padding: 0 20px 0 20px;
-}
-
-#myTopnav ul li {
+.nav-item {
   border-right: 1px solid white;
 }
 
-#myTopnav ul li:nth-child(4),
-#myTopnav ul li:nth-child(5) {
+.nav-item:nth-child(4),
+.nav-item:nth-child(5) {
   border-right: none;
-}
-
-#myTopnav li.icon {
-  display: none;
 }
 
 /* Showcase */
@@ -224,7 +188,7 @@ header {
   -moz-columns: 2;
   */
   margin: 10px;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   list-style-type: circle;
 }
 
@@ -339,16 +303,8 @@ footer a {
     font-size: 10px;
   }
 
-  #myTopnav {
-    margin-top: 0;
-  }
-
-  #myTopnav a {
-    font-size: 10px;
-  }
-
-  #myTopnav li {
-    padding: 0 10px 0 10px;
+  .nav-item {
+    border-right: none;
   }
 
   #showcase h1 {
