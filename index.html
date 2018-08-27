@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <!-- NOTE: Responsive viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Premier woman-owned experts in technology staffing, delivering exceptional talent, service and experience to both our clients and consultants">
   <!-- NOTE:  get some proper SEO keywords -->
   <meta name="keywords" content="J Brown Partners, J Brown, staffing, boston staffing, woman owned, talent, temporary, consultant, candidate, contractor, permanent">
   <meta name="author" content="J Brown Partners">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   <title>J Brown Partners</title>
   <link rel="stylesheet" href="./assets/css/master.css">
   <!-- ****** faviconit.com favicons ****** -->
@@ -41,31 +44,45 @@
 </head>
   <body>
     <header>
-      <div id="top-container">
-        <div id="smallcontact">
-          <ul>
-            <li><i class="fas fa-phone-volume"></i> 339-440-2831</li>
-            <li><i class="fas fa-envelope"></i><a href="mailto:janine@jbrownpartners.com">janine@jbrownpartners.com</a></li>
-            <li><a href="https://www.linkedin.com/company/j-brown-partners/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-              </a></li>
+      <div class="container">
+        <div id="smallcontact" class="text-center text-md-right">
+          <ul class="list-inline">
+            <li class="list-inline-item"><i class="fas fa-phone-volume"></i> 339-440-2831</li>
+            <li class="list-inline-item">
+              <a href="mailto:janine@jbrownpartners.com">
+                <i class="fas fa-envelope"></i>
+                janine@jbrownpartners.com
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/company/j-brown-partners/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
           </ul>
-        </div>
-        <div id="branding">
-          <a href="#top"><img height="51" width="54" src="./assets/img/jbp-54.jpg" alt="J Brown Partners"></a>
-        </div>
-        <div id="brandingTitle">
-            <h1>J Brown Partners</h1>
         </div>
 
-        <nav id="myTopnav" class="topnav">
-          <ul>
-            <li><a href="#approach">Approach</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="icon"><a href="javascript:void(0);"  onclick="showResponsiveMenu()"><i class="fa fa-bars"></i></a></li>
-          </ul>
+        <!-- <nav id="myTopnav" class="topnav navbar navbar-expand-lg"> -->
+        <nav id="" class="navbar navbar-dark navbar-expand-md" role="navigation">
+
+          <a class="navbar-brand header-header" href="#top">
+            <img height="51" width="54" src="./assets/img/jbp-54.jpg" alt="J Brown Partners">
+            J Brown Partners
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse " id="basicExampleNav">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#approach">Approach</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+              </ul>
+          </div>
+          <!-- Collapsible content -->
         </nav>
       </div>
     </header>
@@ -73,7 +90,7 @@
     <section id="showcase">
       <!-- <div class="bg-image"></div> -->
       <div class="container">
-        <h1>Greater Boston's Premier Woman-owned Experts In Technology Staffing</h1>
+        <h1 class="body-header">Greater Boston's Premier Woman-owned Experts In Technology Staffing</h1>
         <p>Delivering exceptional talent, service and experience to both our clients and consultants </p>
       </div>
     </section>
@@ -108,36 +125,36 @@
 
     <section id="approach">
       <div class="container">
-        <h1>Our Unique Approach</h1>
+        <h1 class="body-header">Our Unique Approach</h1>
         <p>
           Our leadership in the IT staffing business is driven by a unique and multi-faceted approach:
         </p>
-        <h2>
+        <h2 class="body-header">
           Relationship Driven
         </h2>
         <p>
           With over two decades of experience, we take the time to truly understand our client's business, technology and staffing needs.  We pride ourselves in build long-term, sustainable relationships by providing top quality IT talent.
        </p>
-        <h2>
+        <h2 class="body-header">
           Industry Expertise
         </h2>
         <p>
           Our unique vetting and recruiting process by actual industry experts allows us to accurately qualify our candidates. We extensively pre-screen talent and our goals are to provide a focused list of high quality resumes quickly and efficiently. We make sure we find the right technical fit, cultural fit and passion for the role.
         </p>
-        <h2>
+        <h2 class="body-header">
           Talent Pool
         </h2>
         <p>
           With a deep network of talented professionals, J Brown Partner can quickly, efficiently and accurately target top quality talent. We have worked with clients in nearly every industry and bring decades of experience and understanding when fulfilling the needs of all our clients and candidates.
         </p>
-        <h2>
+        <h2 class="body-header">
           Contractor Care
         </h2>
         <p>
           Our Contractor Care Program provides excellent resources, guidance and experience for our talent, so they can focus on providing their expertise to our clients from day one. We have a dedicated team to ensure that once candidates are placed, they will continue to receive check-ins to make sure things are running smoothly.
         </P>
 
-        <h1>What This Means</h1>
+        <h1 class="body-header">What This Means</h1>
         <p>
           By truly understanding our clients, vetting and qualifying candidates accurately, and making sure there is a fit in every area, we don't waste time, energy and money.
         </p>
@@ -159,21 +176,21 @@
         <div class="services-grid-container">
           <div class="box">
             <i class="fas fa-handshake fa-4x"></i>
-            <h3>Consulting Services</h3>
+            <h3  class="body-header">Consulting Services</h3>
             <p>
               We work with our clients to understand their needs and challenges and provide the right top quality talent to achieve the desired outcomes. J Brown Partners has developed a deep network of over 1,000 talented professionals in EHR, Development, Project Management, Networking, Operations and all other areas of IT. We can quickly, effectively and accurately tap into this network to fulfill even the most challenging roles.
             </p>
           </div>
           <div class="box">
             <i class="fas fa-users fa-4x"></i>
-            <h3>Candidate Services</h3>
+            <h3  class="body-header">Candidate Services</h3>
             <p>
               Our Consultant Support Program offers support, expertise and opportunity. Our team identifies the best open IT positions at leading organizations and creates customized marketing.
             </p>
           </div>
           <div class="box">
             <i class="fab fa-wpexplorer fa-4x"></i>
-            <h3>Permanent Placement</h3>
+            <h3  class="body-header">Permanent Placement</h3>
             <p>
               We take the time to understand your personal background, requirements and ambitions to match you with exciting opportunities. We also excel at bringing tailored services to our clients to attract first-class candidates using the latest technology, deep networks and decades of industry experience.
             </p>
@@ -186,30 +203,31 @@
 
     <section id="areasofexpertise">
       <div class="container">
-        <h2>Areas Of Expertise</h2>
-        <p> JB Brown partners works in several industry verticals including Financial Services, Healthcare, Higher Education, Retail, Information Technology and Computer Services. We regularly work with:</p>
-        <ul>
-          <li>DEV Ops</li>
-          <li>Security</li>
-          <li>UX/UI Developers</li>
-          <li>Full Stack Developers</li>
-          <li>Front-End Engineers</li>
-          <li>Project Managers</li>
-          <li>Business Analysts</li>
-          <li>Application Developers and Architects</li>
-          <li>Database Developers and Administrators</li>
-          <li>Quality Assurance Analysts</li>
-          <li>System Administrators</li>
-          <li>Technology Infrastructure Support Analysts</li>
-        </ul>
+        <h2  class="body-header">Areas Of Expertise</h2>
+        <p> JB Brown partners works in several industry verticals including Financial Services, Healthcare, Higher Education, Retail, Information Technology and Computer Services. We regularly work with:
+          <ul>
+            <li>DEV Ops</li>
+            <li>Security</li>
+            <li>UX/UI Developers</li>
+            <li>Full Stack Developers</li>
+            <li>Front-End Engineers</li>
+            <li>Project Managers</li>
+            <li>Business Analysts</li>
+            <li>Application Developers and Architects</li>
+            <li>Database Developers and Administrators</li>
+            <li>Quality Assurance Analysts</li>
+            <li>System Administrators</li>
+            <li>Technology Infrastructure Support Analysts</li>
+          </ul>
+        </p>
       </div>
     </section>
 
 
     <section id="leadership">
       <div class="container">
-        <h1>Leadership</h1>
-        <h2>Janine Brown, Owner and President</h2>
+        <h1 class="body-header">Leadership</h1>
+        <h2 class="body-header">Janine Brown, Owner and President</h2>
         <p> Janine Brown is Owner and President of J Brown Partners. As a twenty-year veteran of the staffing industry, she brings passion and integrity to her clients.  Over her career she has worked in recruiting, sales and management positions before starting her own company.  "This is dear to my heart, and I take a lot of pride and responsibility in what we do. Our belief is there is a company, place and fit for everyone. We work hard every day to make sure we are providing exceptional services for our clients and candidates."
 
       </div>
@@ -217,7 +235,7 @@
 
 
   <footer>
-    <h2>Contact Us</h2>
+    <h2 class="body-header">Contact Us</h2>
     <section id="contact">
       <div class="container">
           <div>Janine Brown</div>
@@ -237,6 +255,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript">
     $(document).ready(function() {
   $(".testimonial").slick({
@@ -251,15 +270,6 @@
     cssEase: "linear"
   });
 });
-
-function showResponsiveMenu() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
 </script>
   </body>
 </html>
