@@ -32,6 +32,14 @@ a {
   font-weight: 500;
   line-height: 26.4px;
 }
+
+.top-container {
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
 .container {
   width: 80%;
   max-width: 900px;
@@ -299,8 +307,14 @@ footer a {
     font-size: 14px;
   }
 
-  .container {
+  .top-container {
     width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  .container {
+    width: 85%;
     max-width: none;
     padding: 0;
   }
