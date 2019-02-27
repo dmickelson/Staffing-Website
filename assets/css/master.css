@@ -209,6 +209,23 @@ footer {
 footer a {
   color: white;
 }
+
+footer .footer-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  grid-gap: 10px 10px;
+  /* background-color: #C0C0C0; */
+}
+
+#WBENC {
+  height: 125px;
+  max-height: 125px;
+  width: auto;
+  max-width: 100%;
+  object-fit: scale-down;
+}
 /* Media Queries */
 
 /* Tablets */
@@ -257,6 +274,15 @@ footer a {
   /* Fix the services layout */
   #services .services-grid-container {
     grid-template-columns: 1fr;
+  }
+
+  footer .footer-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  #WBENC {
+    height: 75px;
+    max-height: 75px;
   }
 
   .header-header {
